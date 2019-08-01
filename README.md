@@ -8,8 +8,8 @@ As of Urbit v0.8.0, the [eyre](https://urbit.org/docs/learn/arvo/eyre/) vane of 
 
 ### Future updates
 
-[ ] Commenting out examples of different file types
-[ ] Adding in examples of mapping multiple files of the same type to a single variable.
+- [ ] Commenting out examples of different file types
+- [ ] Adding in examples of mapping multiple files of the same type to a single variable.
 
 ## Acknowledgements
 
