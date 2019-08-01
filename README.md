@@ -6,6 +6,14 @@ Basic template for mounting an arbitrary HTML page to an [Urbit](https://urbit.o
 
 As of Urbit v0.8.0, the [eyre](https://urbit.org/docs/learn/arvo/eyre/) vane of Arvo no longer automatically mounts everything in the `/web` folder. It now works through the declaration of endpoints. This is a boilerplate for that.
 
+### Usage
+
+Clone this repo. Copy everything in urbit/app to your Urbit ship's pier, in its respective /app folder. By default, it will mount `/staticsite/index.html` to `[yourship].dev/~staticsite`.
+
+Amend the "staticsite" name to whatever you like -- ensure you change the .hoon filename, the "staticsite" folder name, and all instances of "staticsite" in the .hoon file. 
+
+See the comments in `staticsite.hoon` for naming the endpoint, too.
+
 ### Future updates
 
 - [ ] Commenting out examples of different file types
