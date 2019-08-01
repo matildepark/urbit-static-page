@@ -8,11 +8,18 @@ As of Urbit v0.8.0, the [eyre](https://urbit.org/docs/learn/arvo/eyre/) vane of 
 
 ### Usage
 
-Clone this repo. Copy everything in urbit/app to your Urbit ship's pier, in its respective /app folder. By default, it will mount `/staticsite/index.html` to `[yourship].dev/~staticsite`.
+1. Clone this repo. 
+2. Copy everything in urbit/app to your Urbit ship's pier, in its respective /app folder. 
 
-Amend the "staticsite" name to whatever you like -- ensure you change the .hoon filename, the "staticsite" folder name, and all instances of "staticsite" in the .hoon file. 
+By default, it will mount `/staticsite/index.html` to `[yourship].dev/~staticsite`.
+
+3. Amend the "staticsite" name to whatever you like -- ensure you change the .hoon filename, the "staticsite" folder name, and all instances of "staticsite" in the .hoon file. 
 
 See the comments in `staticsite.hoon` for naming the endpoint, too.
+
+4. `|commit %home` and `|start your-appname`.
+
+5. e m b r a c e g e o c i t i e s
 
 ### Future updates
 
