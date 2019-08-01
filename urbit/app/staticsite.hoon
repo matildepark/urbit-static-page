@@ -32,7 +32,9 @@
   ^-  (quip move _this)
   [~ this]
 ::
-::
+:: If the request line at the endpoint has [x], serve [x].
+:: In this case, there's a single request line, so it goes right
+:: to index.html.
 ++  poke-handle-http-request
   |=  =inbound-request:eyre
   ^-  (quip move _this)
