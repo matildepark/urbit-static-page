@@ -38,8 +38,6 @@
 ++  poke-handle-http-request
   |=  =inbound-request:eyre
   ^-  (quip move _this)
-  ::
-  =+  request-line=(parse-request-line url.request.inbound-request)
   :_  this
   [ost.bol %http-response (html-response:app index)]~
 --
