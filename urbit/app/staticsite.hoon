@@ -1,6 +1,4 @@
-:: Import the server library. Declare "index" as a variable with a ford rune.
-:: Attach it to index.html in /app/staticsite.
-/+  *server
+/+  *server, default-agent, verb
 /=  index
   /^  octs
   /;  as-octs:mimes:html
@@ -8,36 +6,46 @@
   /|  /html/
       /~  ~
   ==
-:: Declare moves the app makes with a core here. It uses %http-response and %connect.
-|%
-+$  move  [bone card]
-+$  card
-  $%  [%http-response =http-event:http]
-      [%connect wire binding:eyre term]
-  ==
---
-:: Making a door.
-|_  [bol=bowl:gall ~]
-:: "this" is just syntactic sugar because "." is harder to read.
-++  this  .
-:: "prep" runs at start -- %connect mounts to the endpoint, /~staticsite.
-++  prep
-  |=  sta=*
-  ^-  (quip move _this)
-  :_  this
-  [ost.bol %connect / [~ /'~staticsite'] %staticsite]~
 ::
-++  bound
-  |=  [wir=wire success=? binding=binding:eyre]
-  ^-  (quip move _this)
+%+  verb  |
+^-  agent:gall
+|_  =bowl:gall
++*  this  .
+    def   ~(. (default-agent this %|) bowl)
+::
+++  on-init
+  ^-  (quip card:agent:gall _this)
+  :_  this
+  [%pass / %arvo %e %connect [~ /'~staticsite'] %staticsite]~
+::
+++  on-save   on-save:def
+++  on-load   on-load:def
+++  on-poke
+  |=  [=mark =vase]
+  ^-  (quip card:agent:gall _this)
+  ?.  ?=(%handle-http-request mark)
+    (on-poke:def mark vase)
+  =+  !<([eyre-id=@ta =inbound-request:eyre] vase)
+  :_  this
+  %+  give-simple-payload:app  eyre-id
+  (html-response:gen index)
+::
+++  on-watch
+  |=  =path
+  ^-  (quip card:agent:gall _this)
+  ?:  ?=([%http-response *] path)
+    [~ this]
+  (on-watch:def path)
+::
+++  on-leave  on-leave:def
+++  on-peek   on-peek:def
+++  on-agent  on-agent:def
+++  on-arvo
+  |=  [=wire =sign-arvo]
+  ^-  (quip card:agent:gall _this)
+  ?.  ?=(%bound +<.sign-arvo)
+    (on-arvo:def wire sign-arvo)
   [~ this]
 ::
-:: If the request line at the endpoint has [x], serve [x].
-:: In this case, there's a single request line, so it goes right
-:: to index.html.
-++  poke-handle-http-request
-  |=  =inbound-request:eyre
-  ^-  (quip move _this)
-  :_  this
-  [ost.bol %http-response (html-response:app index)]~
+++  on-fail   on-fail:def
 --
