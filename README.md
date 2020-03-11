@@ -17,7 +17,7 @@ You can also set any domain name to your ship's IP address, if you prefer.
 1. Clone this repo.
 2. If you want to rename the app or the endpoint, you can do either respectively by renaming `staticsite.hoon` and the `staticsite` folder, for the app; and all mentions of `~staticsite` in the former `staticsite.hoon` for the endpoint. Feel free to add your HTML, CSS, and JS files to the folder when ready.
 3. Copy everything in `urbit/app` to your Urbit ship's pier, within its respective /app folder.
-4. `|commit %home` and `|start your-app-name`.
+4. `|commit %home` and `|start %your-app-name`.
 5. e m b r a c e g e o c i t i e s
 
 ### Future updates
