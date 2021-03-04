@@ -2,6 +2,8 @@
 
 Basic template for mounting a static website (HTML+CSS+JS) to an [Urbit](https://urbit.org) ship v.0.10.0 or higher.
 
+[![awesome urbit badge](https://img.shields.io/badge/~-awesome%20urbit-lightgrey)](https://github.com/urbit/awesome-urbit)
+
 ## Overview
 
 As of Urbit v0.8.0, the eyre vane (HTTP server) of Arvo no longer automatically mounts everything in the `/web` folder. It now works through the declaration of endpoints. 
