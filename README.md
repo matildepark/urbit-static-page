@@ -1,3 +1,5 @@
+**Notice:** This is nowhere near current and should only be considered for the purpose of mounting static HTML pages in archival subnetworks (eg. galaxies, stars, and planets pinned to Vere version 0.10.0). As of November 2023, no such archival project exists, though one could certainly imagine it.
+
 # urbit-static-page
 
 Basic template for mounting a static website (HTML+CSS+JS) to an [Urbit](https://urbit.org) ship v.0.10.0 or higher.
